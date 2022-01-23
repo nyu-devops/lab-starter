@@ -1,0 +1,34 @@
+{
+	"name": "Python 3",
+	"dockerFile": "Dockerfile",
+	"context": "..",
+	"remoteUser": "devops",
+	"workspaceFolder": "/app",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated",
+	// "mounts": [
+	// 	"source=${localEnv:HOME}/.ssh,target=/home/devops/.ssh,type=bind,consistency=cached",
+	// ],	
+    "runArgs": [
+        "-h","nyu"
+    ],
+	"extensions": [
+		"visualstudioexptteam.vscodeintellicode",
+		"alexkrechik.cucumberautocomplete",
+		"bierner.github-markdown-preview",
+		"cstrap.flask-snippets",
+		"DavidAnson.vscode-markdownlint",
+		"donjayamanne.githistory",
+		"GitHub.vscode-pull-request-github",
+		"hbenl.vscode-test-explorer",
+		"hnw.vscode-auto-open-markdown-preview",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"njpwerner.autodocstring",
+		"redhat.vscode-yaml",
+		"SonarSource.sonarlint-vscode",
+		"wholroyd.jinja",
+		"yzhang.markdown-all-in-one"		
+	],
+	//"forwardPorts": [5000],
+	"postCreateCommand": "sudo pip install -r requirements.txt",
+}
