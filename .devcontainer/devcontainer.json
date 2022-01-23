@@ -12,7 +12,7 @@
         "-h","nyu"
     ],
 	"extensions": [
-		"visualstudioexptteam.vscodeintellicode",
+		"VisualStudioExptTeam.vscodeintellicode",
 		"alexkrechik.cucumberautocomplete",
 		"bierner.github-markdown-preview",
 		"cstrap.flask-snippets",
@@ -26,6 +26,7 @@
 		"njpwerner.autodocstring",
 		"redhat.vscode-yaml",
 		"SonarSource.sonarlint-vscode",
+		"streetsidesoftware.code-spell-checker",
 		"wholroyd.jinja",
 		"yzhang.markdown-all-in-one"		
 	],
