@@ -3,7 +3,7 @@ FROM python:3.9-slim
 
 # Add any tools that are needed beyond Python 3.9
 RUN apt-get update && \
-    apt-get install -y sudo git zip tree curl wget jq && \
+    apt-get install -y sudo vim git zip tree curl wget jq && \
     apt-get autoremove -y && \
     apt-get clean -y
 
@@ -23,6 +23,9 @@ RUN groupadd --gid $USER_GID $USERNAME \
 WORKDIR /app
 RUN python -m pip install --upgrade pip && \
     pip install --upgrade wheel
+
+# Enable color terminal for docker exec bash
+ENV TERM=xterm-256color
 
 EXPOSE 5000
 
