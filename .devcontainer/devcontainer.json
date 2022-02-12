@@ -8,9 +8,10 @@
 	// "mounts": [
 	// 	"source=${localEnv:HOME}/.ssh,target=/home/devops/.ssh,type=bind,consistency=cached",
 	// ],	
-    "runArgs": [
-        "-h","nyu"
-    ],
+    "runArgs": ["-h","nyu"],
+    "remoteEnv": {
+      "FLASK_ENV": "development"
+    },
 	"extensions": [
 		"VisualStudioExptTeam.vscodeintellicode",
 		"alexkrechik.cucumberautocomplete",
