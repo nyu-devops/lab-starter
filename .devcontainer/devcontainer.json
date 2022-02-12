@@ -5,9 +5,6 @@
 	"remoteUser": "devops",
 	"workspaceFolder": "/app",
     "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated",
-	// "mounts": [
-	// 	"source=${localEnv:HOME}/.ssh,target=/home/devops/.ssh,type=bind,consistency=cached",
-	// ],	
     "runArgs": ["-h","nyu"],
     "remoteEnv": {
       "FLASK_ENV": "development"
