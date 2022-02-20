@@ -4,6 +4,8 @@
 
 This first lab is to ensure that your development environment is working correctly. You should only need to install this software once to be ready for all of the labs in this course.
 
+You can read more about creating these environments in my article: [Creating Reproducable Development Environments](https://johnrofrano.medium.com/creating-reproducible-development-environments-fac8d6471f35)
+
 ## Prerequisite Software Installation
 
 This lab uses Docker and Visual Studio Code with the Remote Containers extension to provide a consistent repeatable disposable development environment for all of the labs in this course.
