@@ -27,5 +27,6 @@
 		"wholroyd.jinja",
 		"yzhang.markdown-all-in-one"		
 	],
-	"postCreateCommand": "sudo pip install -r requirements.txt",
+	//"postCreateCommand": "sudo pip install -r requirements.txt"
+	"postCreateCommand": "pipenv install --dev"
 }

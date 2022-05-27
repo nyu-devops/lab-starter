@@ -21,7 +21,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 # Set up the Python development environment
 WORKDIR /app
-RUN python -m pip install --upgrade pip wheel
+RUN python -m pip install --upgrade pip wheel pipenv
 
 ENV PORT 8000
 EXPOSE $PORT
