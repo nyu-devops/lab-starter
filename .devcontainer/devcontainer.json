@@ -5,7 +5,11 @@
 	"remoteUser": "devops",
 	"workspaceFolder": "/app",
     "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated",
-    "runArgs": ["-h","nyu"],
+    "runArgs": ["--name", "lab-starter", "-h","nyu"],
+    "mounts": [
+        "source=profile,target=/home/devops,type=volume",
+        "target=/home/devops/.vscode-server,type=volume"
+    ],
     "remoteEnv": {
       "FLASK_ENV": "development"
     },
