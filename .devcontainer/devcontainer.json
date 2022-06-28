@@ -20,6 +20,7 @@
 		"hbenl.vscode-test-explorer",
 		"hnw.vscode-auto-open-markdown-preview",
 		"ms-python.python",
+        "ms-python.pylint",
 		"ms-python.vscode-pylance",
 		"njpwerner.autodocstring",
 		"redhat.vscode-yaml",
