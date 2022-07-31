@@ -1,10 +1,11 @@
 # NYU DevOps Starter Lab
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![platform](https://img.shields.io/badge/platform-python-blue.svg)
 
 This first lab is to ensure that your development environment is working correctly. You should only need to install this software once to be ready for all of the labs in this course.
 
-You can read more about creating these environments in my article: [Creating Reproducable Development Environments](https://johnrofrano.medium.com/creating-reproducible-development-environments-fac8d6471f35)
+You can read more about creating these environments in my article: [Creating Reproducible Development Environments](https://johnrofrano.medium.com/creating-reproducible-development-environments-fac8d6471f35)
 
 ## Prerequisite Software Installation
 
