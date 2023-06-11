@@ -2,6 +2,13 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.testing.unittestEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test_*.py"
+    ],    
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
