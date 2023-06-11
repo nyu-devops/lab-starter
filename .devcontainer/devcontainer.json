@@ -1,5 +1,5 @@
 {
-	"name": "Python 3",
+	"name": "DevOps @ NYU",
 	"dockerFile": "Dockerfile",
 	"context": "..",
 	"remoteUser": "devops",
@@ -9,14 +9,13 @@
     "remoteEnv": {
       "FLASK_ENV": "development"
     },
-	"customizations": {
+	"customizations":{
 		"vscode": {
 			"extensions": [
 				"VisualStudioExptTeam.vscodeintellicode",
 				"ms-python.python",
 				"ms-python.pylint",
 				"ms-python.vscode-pylance",
-				"alexkrechik.cucumberautocomplete",
 				"cstrap.flask-snippets",
 				"yzhang.markdown-all-in-one",
 				"bierner.github-markdown-preview",
@@ -34,6 +33,5 @@
 				"bbenoist.vagrant"
 			]		
 		}
-	},
-	"postCreateCommand": "sudo pip install -r requirements.txt"
+	}
 }
