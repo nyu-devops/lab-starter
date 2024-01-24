@@ -111,8 +111,8 @@ $ docker rm d9c94acd264b
 
 ## License
 
-Copyright (c) 2020-2023 John Rofrano. All rights reserved.
+Copyright (c) 2020-202 John Rofrano. All rights reserved.
 
 Licensed under the Apache License. See [LICENSE](LICENSE)
 
-This repo is part of the NYU masters class: **CSCI-GA.2820-001 DevOps and Agile Methodologies** created by *John Rofrano*
+This repo is part of the NYU masters class: **CSCI-GA.2820-001 DevOps and Agile Methodologies** created and taught by [John Rofrano](https://www.linkedin.com/in/JohnRofrano/)
