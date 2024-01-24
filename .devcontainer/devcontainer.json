@@ -1,3 +1,4 @@
+// cspell: disable
 {
 	"name": "DevOps @ NYU",
 	"dockerFile": "Dockerfile",
@@ -11,10 +12,34 @@
     },
 	"customizations":{
 		"vscode": {
+			"settings": {
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter",
+					"editor.formatOnSave": true
+				},
+				"python.testing.unittestEnabled": true,
+				"python.testing.unittestPath": "test_*.py",				
+				"python.testing.unittestArgs": [
+					"-v",
+					"-s",
+					"./tests",
+					"-p",
+					"test_*.py"
+				],
+				"markdown-preview-github-styles.colorTheme": "light",
+				"files.exclude": {
+					"**/.git": true,
+					"**/.DS_Store": true,
+					"**/*.pyc": true,
+					"**/__pycache__": true,
+					"**/.pytest_cache": true
+				}
+			},	
 			"extensions": [
 				"VisualStudioExptTeam.vscodeintellicode",
 				"ms-python.python",
 				"ms-python.pylint",
+				"ms-python.black-formatter",
 				"ms-python.vscode-pylance",
 				"cstrap.flask-snippets",
 				"yzhang.markdown-all-in-one",
@@ -26,10 +51,10 @@
 				"hbenl.vscode-test-explorer",
 				"LittleFoxTeam.vscode-python-test-adapter",
 				"njpwerner.autodocstring",
+				"rangav.vscode-thunder-client",
 				"redhat.vscode-yaml",
 				"streetsidesoftware.code-spell-checker",
 				"wholroyd.jinja",
-				"rangav.vscode-thunder-client",
 				"bbenoist.vagrant"
 			]		
 		}
