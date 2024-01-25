@@ -12,6 +12,7 @@ This lab uses Docker and Visual Studio Code with the Remote Containers extension
 
 You will need the following software installed:
 
+- [Git](https://git-scm.com/downloads)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension from the Visual Studio Marketplace
