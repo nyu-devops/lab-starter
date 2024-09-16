@@ -6,7 +6,7 @@
 	"remoteUser": "devops",
 	"workspaceFolder": "/app",
     "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated",
-    "runArgs": ["-h","nyu"],
+    "runArgs": ["-h","nyu", "--name", "lab-starter"],
     "remoteEnv": {
       "FLASK_ENV": "development"
     },
