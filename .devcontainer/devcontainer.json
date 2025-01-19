@@ -1,62 +1,63 @@
-// cspell: disable
 {
-	"name": "DevOps @ NYU",
-	"dockerFile": "Dockerfile",
-	"context": "..",
-	"remoteUser": "devops",
-	"workspaceFolder": "/app",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated",
-    "runArgs": ["-h","nyu", "--name", "lab-starter"],
+	// Collaborated with ChatGPT to enhance comments and improve the clarity of this configuration file
+	"name": "DevOps @ NYU", // Project name
+    "dockerFile": "Dockerfile", // Name of the Docker configuration file
+    "context": "..", // Docker context path, usually pointing to the project root directory
+    "remoteUser": "devops", // Username for remote execution
+    "workspaceFolder": "/app", // The default directory where commands are executed inside the container. It serves as the root for all development activities within the container environment, ensuring consistent file paths and making debugging more straightforward.
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated", // Bind the local folder to a folder inside the container (The container does not create a new copy of the folder; it uses the mounted directory in real-time)
+  
+    "runArgs": ["-h","nyu", "--name", "lab-starter"], // -h: set hostname, --name: set container name
     "remoteEnv": {
-      "FLASK_ENV": "development"
+      "FLASK_ENV": "development" // Set environment variable to enable Flask development mode
     },
-	"customizations":{
-		"vscode": {
-			"settings": {
-				"[python]": {
-					"editor.defaultFormatter": "ms-python.black-formatter",
-					"editor.formatOnSave": true
-				},
-				"python.testing.unittestEnabled": true,
-				"python.testing.unittestPath": "test_*.py",				
-				"python.testing.unittestArgs": [
-					"-v",
-					"-s",
-					"./tests",
-					"-p",
-					"test_*.py"
-				],
-				"markdown-preview-github-styles.colorTheme": "light",
-				"files.exclude": {
-					"**/.git": true,
-					"**/.DS_Store": true,
-					"**/*.pyc": true,
-					"**/__pycache__": true,
-					"**/.pytest_cache": true
-				}
-			},	
-			"extensions": [
-				"VisualStudioExptTeam.vscodeintellicode",
-				"ms-python.python",
-				"ms-python.pylint",
-				"ms-python.black-formatter",
-				"ms-python.vscode-pylance",
-				"cstrap.flask-snippets",
-				"yzhang.markdown-all-in-one",
-				"bierner.github-markdown-preview",
-				"hnw.vscode-auto-open-markdown-preview",
-				"DavidAnson.vscode-markdownlint",
-				"donjayamanne.githistory",
-				"GitHub.vscode-pull-request-github",
-				"hbenl.vscode-test-explorer",
-				"LittleFoxTeam.vscode-python-test-adapter",
-				"njpwerner.autodocstring",
-				"rangav.vscode-thunder-client",
-				"redhat.vscode-yaml",
-				"streetsidesoftware.code-spell-checker",
-				"wholroyd.jinja",
-				"bbenoist.vagrant"
-			]		
-		}
-	}
+    "customizations":{
+        "vscode": {
+            "settings": {
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter", // Default to using the Black formatter
+                    "editor.formatOnSave": true // Automatically format on save
+                },
+                "python.testing.unittestEnabled": true, // Enable the unittest testing framework
+                "python.testing.unittestPath": "test_*.py", // Define the pattern for test file names
+                "python.testing.unittestArgs": [
+                    "-v", // Verbose mode
+                    "-s", // Test root directory
+                    "./tests", // Location of the test files
+                    "-p", // Test file name format
+                    "test_*.py"
+                ],
+                "markdown-preview-github-styles.colorTheme": "light", // Use light theme for Markdown preview
+                "files.exclude": {
+                    "**/.git": true, // Hide the .git directory
+                    "**/.DS_Store": true, // Hide macOS system files
+                    "**/*.pyc": true, // Hide Python compiled files
+                    "**/__pycache__": true, // Hide Python cache directories
+                    "**/.pytest_cache": true // Hide pytest cache directories
+                }
+            },    
+            "extensions": [
+                "VisualStudioExptTeam.vscodeintellicode", // Provides AI-driven code suggestions
+                "ms-python.python", // Support for Python development
+                "ms-python.pylint", // Pylint static analysis tool
+                "ms-python.black-formatter", // Black code formatter
+                "ms-python.vscode-pylance", // Improves Python IntelliSense performance
+                "cstrap.flask-snippets", // Flask code snippets
+                "yzhang.markdown-all-in-one", // Comprehensive Markdown support
+                "bierner.github-markdown-preview", // GitHub-style Markdown preview
+                "hnw.vscode-auto-open-markdown-preview", // Automatically open Markdown preview
+                "DavidAnson.vscode-markdownlint", // Markdown syntax checker
+                "donjayamanne.githistory", // Git history viewing tool
+                "GitHub.vscode-pull-request-github", // Support for GitHub pull requests
+                "hbenl.vscode-test-explorer", // Test file overview tool
+                "LittleFoxTeam.vscode-python-test-adapter", // Python testing framework adapter
+                "njpwerner.autodocstring", // Automatically generate Python docstrings
+                "rangav.vscode-thunder-client", // HTTP client testing tool
+                "redhat.vscode-yaml", // YAML syntax support
+                "streetsidesoftware.code-spell-checker", // Spell checker tool
+                "wholroyd.jinja", // Jinja template syntax support
+                "bbenoist.vagrant" // Vagrant support
+            ]        
+        }
+    }
 }

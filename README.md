@@ -110,6 +110,31 @@ $ docker stop d9c94acd264b
 $ docker rm d9c94acd264b
 ```
 
+## Explain the role of certain files and folders in the project structure for better understanding
+
+### **.devcontainer/**
+- **`devcontainer.json`**: Configuration file for setting up a development container. It defines the development environment, including extensions, settings, and the base image to use (The json file will link to `Dockerfile`).
+- **`Dockerfile`**: Defines the container environment, specifying the base image and any dependencies or tools needed for the project.
+
+### **.vscode/**
+- **`launch.json`**: Configuration for debugging in Visual Studio Code. It specifies how to launch and debug the application.
+
+### **`.flaskenv`**:
+- Stores environment variables for Flask applications. Common variables include `FLASK_APP` (entry point) and `FLASK_ENV` (development or production mode).
+
+### **`.gitattributes`**:
+- Specifies file handling rules for Git, such as line endings, file diffing, and merging behavior.
+
+### **`.gitignore`**:
+- Lists files and directories to be ignored by Git. Typically includes temporary files, build artifacts, and sensitive information.
+
+### **LICENSE**:
+- Indicates the licensing terms for your project. Defines how others can use, modify, and distribute your code.
+
+
+### **setup.cfg**:
+- Configuration file for packaging and distribution of your Python project. Often used with `setuptools`.
+
 ## License
 
 Copyright (c) 2020-2024 John Rofrano. All rights reserved.
