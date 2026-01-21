@@ -1,5 +1,5 @@
 # Image for a Python 3 development environment
-FROM python:3.11-slim
+FROM quay.io/rofrano/python:3.11-slim
 
 # Add any tools that are needed beyond Python 3.11
 RUN apt-get update && \
