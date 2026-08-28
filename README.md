@@ -110,9 +110,38 @@ $ docker stop d9c94acd264b
 $ docker rm d9c94acd264b
 ```
 
+## Optional: Generative AI Tools
+
+If you would like to use Generative AI tools like Claude Code, and you don't want to pay for an account, it is recommended to run them locally with Ollama. If you have an Apple Silicon Mac, this should handle local models nicely.
+
+Software for Claude Code with local LLMs
+
+```bash
+brew install --cask ollama-app
+brew install --cask claude-code
+```
+
+Start Claude Code with Ollama using qwen3.5 which is a 6GB model:
+
+```bash
+ollama launch claude --model qwen3.5:latest
+```
+
+If you have more memory than the base 8GB Mac, here are some other models that work well and their sizes:
+
+```text
+NAME                                      SIZE
+qwen3.5:latest                            6.6 GB
+coney_/gpt-oss_claude-sonnet4.6:latest    13 GB
+qwen3-coder:latest                        18 GB
+qwen3.6:latest                            23 GB
+```
+
+I find `qwen3-coder` to be a nice trade-off between memory size and quality.
+
 ## License
 
-Copyright (c) 2020-2024 John Rofrano. All rights reserved.
+Copyright (c) 2020-2026 John Rofrano. All rights reserved.
 
 Licensed under the Apache License. See [LICENSE](LICENSE)
 
